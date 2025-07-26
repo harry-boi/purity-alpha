@@ -29,7 +29,7 @@ export default function FooterSection() {
               {/* Left Column - Logo & Contact */}
               <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
                 <div className="flex items-center gap-2 mb-4">
-                  <img src="/purity_capital_logo.png" />
+                  <img src="purity_capital_logo.png" />
                 </div>
                 <div className="space-y-2 text-sm text-gray-300">
                   <p>Purity Community Estate, Plot 223/842 Lekki,</p>

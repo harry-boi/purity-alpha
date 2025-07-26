@@ -78,7 +78,7 @@ export default function LoansSection() {
           </p>
           <button className="py-3 font-medium rounded-full text-[#1A4420] flex items-center">
             <span>Get Started Today</span>
-            <img src="/nextarrowicon.png" className="w-4 h-4 ml-2" />
+            <img src="nextarrowicon.png" className="w-4 h-4 ml-2" />
           </button>
         </motion.div>
       </div>

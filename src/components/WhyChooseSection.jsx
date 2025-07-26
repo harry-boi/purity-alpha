@@ -55,7 +55,7 @@ export default function WhyChooseSection() {
           >
             <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full shadow">
               {/* Shield Icon */}
-              <img src="/securedimage.png" />
+              <img src="securedimage.png" />
             </div>
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
               Secure & Encrypted Transactions
@@ -77,7 +77,7 @@ export default function WhyChooseSection() {
           >
             <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full shadow">
               {/* Chart Icon */}
-              <img src="/roi_image.png" />
+              <img src="roi_image.png" />
             </div>
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
               Smart, Transparent ROI System

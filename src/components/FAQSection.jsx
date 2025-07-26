@@ -59,7 +59,7 @@ export default function FAQSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <img
-            src="/faq_icon.png"
+            src="faq_icon.png"
             alt="FAQ Icon"
             className="w-16 h-16 md:w-20 md:h-20 mb-2"
           />
