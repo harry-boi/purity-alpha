@@ -43,13 +43,13 @@ const fadeInRight = {
 export default function FAQSection() {
   return (
     <motion.section
-      className="bg-[#F6F6F6] py-16 mt-20 px-4 md:px-0 border-t border-gray-200"
+      className="bg-[#F6F6F6] py-16 mt-20 px-8 md:px-0 border-t border-gray-200"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
         {/* Left - Icon and Heading */}
         <motion.div
           className="flex flex-col items-start text-left gap-4"
@@ -59,7 +59,7 @@ export default function FAQSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <img
-            src="faq_icon.png"
+            src={`${import.meta.env.BASE_URL}faq_icon.png`}
             alt="FAQ Icon"
             className="w-16 h-16 md:w-20 md:h-20 mb-2"
           />

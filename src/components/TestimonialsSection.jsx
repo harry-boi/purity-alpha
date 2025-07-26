@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
       viewport={{ once: false, amount: 0.3 }}
       variants={fadeInUp}
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto px-4">
         <motion.h2
           className="text-2xl md:text-3xl font-bold text-center text-green-900 mb-2 mt-2"
           variants={fadeIn}

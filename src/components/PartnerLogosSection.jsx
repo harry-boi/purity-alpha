@@ -54,7 +54,7 @@ export default function PartnerLogosSection() {
           <div className="flex flex-col items-center">
             <div className="flex items-center mb-1">
               <img
-                src="google_partner.png"
+                src={`${import.meta.env.BASE_URL}google_partner.png`}
                 alt="Google Partner"
                 className="mr-1 w-38"
               />
@@ -64,7 +64,7 @@ export default function PartnerLogosSection() {
           <div className="flex flex-col items-center">
             <div className="flex items-center mb-1">
               <img
-                src="shopify_partner.png"
+                src={`${import.meta.env.BASE_URL}shopify_partner.png`}
                 alt="Shopify Partner"
                 className="w-38"
               />
@@ -74,7 +74,7 @@ export default function PartnerLogosSection() {
           <div className="flex flex-col items-center">
             <div className="flex items-center mb-1">
               <img
-                src="amazon_partner.png"
+                src={`${import.meta.env.BASE_URL}amazon_partner.png`}
                 alt="Amazon Advertising"
                 className="w-38"
               />
@@ -83,7 +83,11 @@ export default function PartnerLogosSection() {
           {/* Meta Partner */}
           <div className="flex flex-col items-center">
             <div className="flex items-center mb-1">
-              <img src="meta_partner.png" alt="Meta Partner" className="w-38" />
+              <img
+                src={`${import.meta.env.BASE_URL}meta_partner.png`}
+                alt="Meta Partner"
+                className="w-38"
+              />
             </div>
           </div>
         </motion.div>

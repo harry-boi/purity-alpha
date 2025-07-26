@@ -33,7 +33,7 @@ export default function WhyChooseSection() {
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto px-5">
         <motion.h2
           className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12"
           variants={fadeIn}
@@ -55,7 +55,7 @@ export default function WhyChooseSection() {
           >
             <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full shadow">
               {/* Shield Icon */}
-              <img src="securedimage.png" />
+              <img src={`${import.meta.env.BASE_URL}securedimage.png`} />
             </div>
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
               Secure & Encrypted Transactions
@@ -77,7 +77,7 @@ export default function WhyChooseSection() {
           >
             <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full shadow">
               {/* Chart Icon */}
-              <img src="roi_image.png" />
+              <img src={`${import.meta.env.BASE_URL}roi_image.png`} />
             </div>
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
               Smart, Transparent ROI System
@@ -99,7 +99,7 @@ export default function WhyChooseSection() {
           >
             <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full shadow">
               {/* No Fee Icon */}
-              <img src="nohidden_charges.png" />
+              <img src={`${import.meta.env.BASE_URL}nohidden_charges.png`} />
             </div>
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
               Zero Hidden Charges

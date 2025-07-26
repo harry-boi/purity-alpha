@@ -79,7 +79,7 @@ export default function HeroSection() {
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* Lock Icon */}
-              <img src="securedimage.png" />
+              <img src={`${import.meta.env.BASE_URL}securedimage.png`} />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 text-sm">
@@ -102,7 +102,7 @@ export default function HeroSection() {
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* ROI Icon */}
-              <img src="roi_image.png" />
+              <img src={`${import.meta.env.BASE_URL}roi_image.png`} />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 text-sm">
@@ -124,7 +124,7 @@ export default function HeroSection() {
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* Fee Icon */}
-              <img src="nohidden_charges.png" />
+              <img src={`${import.meta.env.BASE_URL}nohidden_charges.png`} />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 text-sm">
@@ -179,7 +179,10 @@ export default function HeroSection() {
             </p>
             <button className="hover:bg-gray-800 mt-10 text-[#123017] font-medium py-3 rounded-full flex items-center">
               <span className="mr-3">Get Started Today</span>
-              <img src="nextarrowicon.png" className="w-4 h-4 align-baseline" />
+              <img
+                src={`${import.meta.env.BASE_URL}nextarrowicon.png`}
+                className="w-4 h-4 align-baseline"
+              />
             </button>
           </motion.div>
           {/* Right - Illustration */}
