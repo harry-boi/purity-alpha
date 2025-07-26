@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import illustration1 from "/src/assets/illustration1.png";
 // Animation variants (copied from App.jsx)
 const fadeInUp = {
@@ -55,7 +56,7 @@ export default function HeroSection() {
       className="relative overflow-hidden w-full"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.3 }}
       variants={fadeIn}
     >
       {/* Feature Cards */}
@@ -63,7 +64,7 @@ export default function HeroSection() {
         className="container w-full"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         variants={fadeInUp}
       >
         <div className="grid grid-cols-1 w-full md:pl-30 pl-10 py-6 h-full md:grid-cols-3 gap-6">
@@ -74,7 +75,7 @@ export default function HeroSection() {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* Lock Icon */}
@@ -97,7 +98,7 @@ export default function HeroSection() {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* ROI Icon */}
@@ -119,7 +120,7 @@ export default function HeroSection() {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* Fee Icon */}
@@ -141,23 +142,37 @@ export default function HeroSection() {
         className="mx-auto px-6 pb-16 bg-[#F9FFEA] w-full"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center w-full px-20 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full md:px-20 py-20">
           {/* Left */}
           <motion.div
             className="space-y-6"
             variants={fadeInLeft}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#123017] leading-tight">
-              Save, Invest and Earn
-              <br />
-              Interest in Crypto
-            </h1>
+            <TypeAnimation
+              sequence={[
+                "Save, Invest and Earn",
+                1200,
+                "Save, Invest and Earn\nInterest in Crypto",
+                2000,
+                "",
+                500,
+                <h1 className="text-4xl lg:text-5xl font-bold text-[#123017] leading-tight">
+                  Save, Invest and Earn
+                  <br />
+                  Interest in Crypto
+                </h1>,
+              ]}
+              wrapper="h1"
+              className="text-4xl lg:text-5xl font-bold text-[#123017] leading-tight whitespace-pre-line"
+              speed={40}
+              repeat={Infinity}
+            />
             <p className="text-lg text-gray-600 leading-relaxed">
               Earn daily interest with flexible or locked USDT savings and
               investment plans.
@@ -173,7 +188,7 @@ export default function HeroSection() {
             variants={fadeInRight}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             {/* Placeholder for person */}
             <div className="w-96 h-80 rounded-lg overflow-hidden relative z-20 flex items-center justify-center">

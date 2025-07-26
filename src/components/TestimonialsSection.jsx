@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
       className="bg-white pb-20 px-4 md:px-0"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.3 }}
       variants={fadeInUp}
     >
       <div className="max-w-5xl mx-auto">
