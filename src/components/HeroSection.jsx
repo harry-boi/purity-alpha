@@ -79,7 +79,7 @@ export default function HeroSection() {
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* Lock Icon */}
-              <img src="/securedimage.png" />
+              <img src="securedimage.png" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 text-sm">
@@ -102,7 +102,7 @@ export default function HeroSection() {
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* ROI Icon */}
-              <img src="/roi_image.png" />
+              <img src="roi_image.png" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 text-sm">
@@ -124,7 +124,7 @@ export default function HeroSection() {
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* Fee Icon */}
-              <img src="/nohidden_charges.png" />
+              <img src="nohidden_charges.png" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 text-sm">
