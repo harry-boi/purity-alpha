@@ -67,7 +67,7 @@ export default function HeroSection() {
         viewport={{ once: false, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <div className="grid grid-cols-1 w-full md:pl-30 pl-10 py-6 h-full md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 w-full md:pl-30 px-10 py-6 h-full md:grid-cols-3 gap-6">
           {/* Card 1 */}
           <motion.div
             className="flex items-start space-x-3"
