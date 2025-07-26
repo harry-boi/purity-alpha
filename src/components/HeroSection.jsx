@@ -67,7 +67,7 @@ export default function HeroSection() {
         viewport={{ once: false, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <div className="grid grid-cols-1 w-full md:pl-30 px-10 py-6 h-full md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 w-full px-4 sm:px-6 md:px-10 py-6 h-full md:grid-cols-3 gap-6 max-w-4xl lg:max-w-5xl mx-auto">
           {/* Card 1 */}
           <motion.div
             className="flex items-start space-x-3"
@@ -139,13 +139,13 @@ export default function HeroSection() {
       </motion.div>
       {/* Hero Section */}
       <motion.div
-        className="mx-auto px-6 pb-16 bg-[#F9FFEA] w-full"
+        className="mx-auto px-4 sm:px-6 md:px-10 pb-16 bg-[#F9FFEA] w-full overflow-x-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center w-full md:px-20 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center w-full py-10 md:py-20">
           {/* Left */}
           <motion.div
             className="space-y-6"
