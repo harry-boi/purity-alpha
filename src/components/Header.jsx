@@ -30,7 +30,7 @@ export default function Header() {
       </header>
 
       {/* Hero Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-24 gap-8 lg:gap-0 min-h-[700px] md:h-screen">
+      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-24 gap-8 lg:gap-0 min-h-[700px] lg:h-screen">
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left pt-14 md:pt-0">
           <h1 className="text-white text-5xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold pt-18 lg:pt-4 leading-tight mb-6">
