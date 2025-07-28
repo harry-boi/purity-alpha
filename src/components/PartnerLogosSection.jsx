@@ -72,7 +72,7 @@ export default function PartnerLogosSection() {
       if (instanceRef.current) {
         instanceRef.current.next();
       }
-    }, 5000); // Increased interval for slower animation
+    }, 5000);
   };
 
   const stopAutoplay = () => {
@@ -174,7 +174,7 @@ export default function PartnerLogosSection() {
             ))}
           </div>
 
-          {/* Single Next Arrow Control */}
+          {/* Next Arrow Control */}
           <div className="flex justify-center mt-8">
             <button
               onClick={() => instanceRef.current?.next()}
