@@ -60,7 +60,7 @@ export default function TestimonialsSection() {
         if (instanceRef.current) {
           instanceRef.current.next();
         }
-      }, 4000);
+      }, 6000);
     }
   };
 

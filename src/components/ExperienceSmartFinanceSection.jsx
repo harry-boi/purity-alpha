@@ -74,11 +74,11 @@ export default function ExperienceSmartFinanceSection() {
               </div>
 
               {/* Mobile Phone Image fixed at bottom */}
-              <div className="md:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2">
+              <div className="md:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full flex justify-center">
                 <img
                   src={`${import.meta.env.BASE_URL}phone.png`}
                   alt="Phone Mockup"
-                  className="w-[260px] sm:w-[280px] object-contain"
+                  className="w-[80vw] max-w-[350px] object-contain"
                 />
               </div>
             </div>

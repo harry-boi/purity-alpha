@@ -72,7 +72,7 @@ export default function PartnerLogosSection() {
       if (instanceRef.current) {
         instanceRef.current.next();
       }
-    }, 3000);
+    }, 5000); // Increased interval for slower animation
   };
 
   const stopAutoplay = () => {
