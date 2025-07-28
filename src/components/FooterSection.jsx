@@ -25,7 +25,7 @@ export default function FooterSection() {
       <footer className="text-white">
         <div className="w-full">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col lg:flex-row lg:justify-between gap-20 mb-8">
+            <div className="flex flex-col md:flex-row lg:justify-between gap-20 mb-8">
               {/* Left Column - Logo & Contact */}
               <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
                 <div className="flex items-center gap-2 mb-4">

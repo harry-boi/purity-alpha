@@ -40,13 +40,13 @@ const fadeInRight = {
 export default function LoansSection() {
   return (
     <motion.div
-      className="bg-white py-16"
+      className="bg-white py-16 overflow-x-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}
       variants={fadeIn}
     >
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-1 items-center">
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-4 items-center">
         {/* Left - Woman Illustration */}
         <motion.div
           className="flex justify-center relative"

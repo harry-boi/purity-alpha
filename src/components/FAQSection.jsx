@@ -41,6 +41,30 @@ const fadeInRight = {
 };
 
 export default function FAQSection() {
+  const [openIndex, setOpenIndex] = React.useState(null);
+  const faqs = [
+    {
+      q: "How does Purity Capital investment work?",
+      a: "You invest your crypto assets into flexible or fixed plans. Your assets are securely held and start earning daily returns, which you can track in the app.",
+    },
+    {
+      q: "Is my crypto safe on Purity Capital?",
+      a: "Yes, we use industry-leading security protocols and store assets in secure, insured wallets. Your funds are protected at all times.",
+    },
+    {
+      q: "Can I withdraw my savings at any time?",
+      a: "You can withdraw from flexible plans at any time. Fixed plans have a lock-in period, after which you can withdraw your funds and earned interest.",
+    },
+    {
+      q: "What do I need to get a crypto loan?",
+      a: "You need to deposit supported crypto as collateral. Once approved, you can instantly borrow against your assets with low interest rates.",
+    },
+    {
+      q: "How long before my investment starts earning ROI?",
+      a: "Your investment starts earning ROI immediately after deposit confirmation. You can track your earnings in real time in the app.",
+    },
+  ];
+
   return (
     <motion.section
       className="bg-[#F6F6F6] py-16 mt-20 px-8 md:px-0 border-t border-gray-200"
@@ -77,34 +101,50 @@ export default function FAQSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          {[
-            "How does Purity Capital investment work?",
-            "Is my crypto safe on Purity Capital?",
-            "Can I withdraw my savings at any time?",
-            "What do I need to get a crypto loan?",
-            "How long before my investment starts earning ROI?",
-          ].map((q, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-between border-gray-200 pb-4"
-            >
-              <span className="text-gray-900 font-medium text-base md:text-sm">
-                {q}
-              </span>
-              <svg
-                className="w-5 h-5 text-gray-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+          {faqs.map((faq, i) => (
+            <div key={i} className="border-b border-gray-200 pb-4">
+              <button
+                className="flex items-center justify-between w-full text-left focus:outline-none"
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
+                aria-controls={`faq-answer-${i}`}
               >
-                <circle cx="12" cy="12" r="10" strokeWidth="2" />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M8 12h8M12 8v8"
-                />
-              </svg>
+                <span className="text-gray-900 font-medium text-base md:text-sm">
+                  {faq.q}
+                </span>
+                <svg
+                  className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${
+                    openIndex === i ? "rotate-45" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" strokeWidth="2" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 12h8M12 8v8"
+                  />
+                </svg>
+              </button>
+              <motion.div
+                id={`faq-answer-${i}`}
+                initial={false}
+                animate={{
+                  height: openIndex === i ? "auto" : 0,
+                  opacity: openIndex === i ? 1 : 0,
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                {openIndex === i && (
+                  <div className="pt-3 text-gray-700 text-sm md:text-base">
+                    {faq.a}
+                  </div>
+                )}
+              </motion.div>
             </div>
           ))}
         </motion.div>

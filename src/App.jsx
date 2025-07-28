@@ -7,6 +7,7 @@ import PartnerLogosSection from "./components/PartnerLogosSection";
 import ExperienceSmartFinanceSection from "./components/ExperienceSmartFinanceSection";
 import FAQSection from "./components/FAQSection";
 import FooterSection from "./components/FooterSection";
+import Header from "./components/Header";
 
 export default function App() {
   React.useEffect(() => {
@@ -18,6 +19,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen font-sans w-full">
+      {/* Header Section */}
+      <Header />
       {/* Top Section */}
       <HeroSection />
       {/* Second Section - Loans */}

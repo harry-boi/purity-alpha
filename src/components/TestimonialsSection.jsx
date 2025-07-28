@@ -1,4 +1,8 @@
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -12,145 +16,217 @@ const fadeInUp = {
     },
   }),
 };
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: (i = 1) => ({
-    opacity: 1,
-    transition: {
-      delay: i * 0.15,
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  }),
-};
 
 export default function TestimonialsSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoplayPaused, setIsAutoplayPaused] = useState(false);
+  const autoplayRef = useRef(null);
+
+  const [sliderRef, instanceRef] = useKeenSlider({
+    loop: true,
+    mode: "snap",
+    slides: {
+      perView: 1,
+      spacing: 16,
+    },
+    breakpoints: {
+      "(min-width: 640px)": {
+        slides: {
+          perView: 2,
+          spacing: 16,
+        },
+      },
+      "(min-width: 1024px)": {
+        slides: {
+          perView: 3,
+          spacing: 24,
+        },
+      },
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      startAutoplay();
+    },
+  });
+
+  const startAutoplay = () => {
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current);
+    }
+    if (!isAutoplayPaused) {
+      autoplayRef.current = setInterval(() => {
+        if (instanceRef.current) {
+          instanceRef.current.next();
+        }
+      }, 4000);
+    }
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current);
+    }
+  };
+
+  const toggleAutoplay = () => {
+    setIsAutoplayPaused(!isAutoplayPaused);
+  };
+
+  useEffect(() => {
+    if (isAutoplayPaused) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
+    return () => stopAutoplay();
+  }, [isAutoplayPaused]);
+
+  const testimonials = [
+    {
+      name: "John Doe",
+      username: "johndoes",
+      initial: "J",
+      text: "Purity Capital made it so easy to save in crypto. I started with a flexible plan, and watching my USDT grow daily has been a game changer!",
+    },
+    {
+      name: "Jane Smith",
+      username: "janesmith",
+      initial: "J",
+      text: "Investing with Purity Capital was a breeze! The user-friendly interface and rapid gains in my crypto portfolio have exceeded my expectations.",
+    },
+    {
+      name: "Michael Tan",
+      username: "michaeltan",
+      initial: "M",
+      text: "I appreciate how Purity Capital offers tailored investment plans. My crypto savings have seen incredible growth, making me more confident in my financial future!",
+    },
+    {
+      name: "Sarah Wilson",
+      username: "sarahwilson",
+      initial: "S",
+      text: "The transparency and security at Purity Capital gave me peace of mind. My crypto investments are performing better than I ever imagined!",
+    },
+    {
+      name: "David Chen",
+      username: "davidchen",
+      initial: "D",
+      text: "From beginner to confident investor, Purity Capital's platform made my crypto journey seamless. The returns speak for themselves!",
+    },
+  ];
+
   return (
-    <motion.section
-      className="bg-white pb-20 px-4 md:px-0"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
-      variants={fadeInUp}
-    >
-      <div className="max-w-5xl mx-auto px-4">
-        <motion.h2
-          className="text-2xl md:text-3xl font-bold text-center text-green-900 mb-2 mt-2"
-          variants={fadeIn}
+    <div className="relative overflow-hidden py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-12"
+          variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          Testimonials
-        </motion.h2>
-        <motion.p
-          className="text-center text-gray-700 mb-10"
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          See what users are saying about their PurityCapital App experience.
-        </motion.p>
-        <div className="grid md:grid-cols-3 gap-6 items-stretch">
-          {/* Testimonial 1 */}
-          <motion.div
-            className="bg-white rounded-2xl p-6 shadow border border-gray-100 flex flex-col"
-            custom={1}
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            What Our Clients Say
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Join thousands of satisfied investors who trust Purity Capital with
+            their crypto investments
+          </p>
+        </motion.div>
+
+        {/* Slider Container */}
+        <div className="relative">
+          <div
+            ref={sliderRef}
+            className="keen-slider"
+            onMouseEnter={() => setIsAutoplayPaused(true)}
+            onMouseLeave={() => setIsAutoplayPaused(false)}
           >
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                <span className="text-gray-700 font-bold">J</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 leading-tight">
-                  John Doe
-                </h4>
-                <p className="text-gray-500 text-xs">@johndoes</p>
-              </div>
-            </div>
-            <p className="text-gray-700 text-sm leading-relaxed flex-1">
-              Purity Capital made it so easy to save in crypto. I started with a
-              flexible plan, and watching my USDT grow daily has been a game
-              changer!
-            </p>
-          </motion.div>
-          {/* Testimonial 2 */}
-          <motion.div
-            className="bg-white rounded-2xl p-6 shadow border border-gray-100 flex flex-col"
-            custom={2}
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                <span className="text-gray-700 font-bold">J</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 leading-tight">
-                  Jane Smith
-                </h4>
-                <p className="text-gray-500 text-xs">@janesmith</p>
-              </div>
-            </div>
-            <p className="text-gray-700 text-sm leading-relaxed flex-1">
-              Investing with Purity Capital was a breeze! The user-friendly
-              interface and rapid gains in my crypto portfolio have exceeded my
-              expectations.
-            </p>
-          </motion.div>
-          {/* Testimonial 3 */}
-          <motion.div
-            className="bg-white rounded-2xl p-6 shadow border border-gray-100 flex flex-col"
-            custom={3}
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                <span className="text-gray-700 font-bold">M</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 leading-tight">
-                  Michael Tan
-                </h4>
-                <p className="text-gray-500 text-xs">@michaeltan</p>
-              </div>
-            </div>
-            <p className="text-gray-700 text-sm leading-relaxed flex-1">
-              I appreciate how Purity Capital offers tailored investment plans.
-              My crypto savings have seen incredible growth, making me more
-              confident in my financial future!
-            </p>
-          </motion.div>
-        </div>
-        {/* Centered Arrow Button below testimonials */}
-        <div className="flex justify-center mt-8">
-          <button className="w-10 h-10 bg-lime-300 rounded-full flex items-center justify-center shadow-md hover:bg-lime-400 transition-colors">
-            <svg
-              className="w-5 h-5 text-green-900"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            {testimonials.map((testimonial, i) => (
+              <motion.div
+                key={i}
+                className="keen-slider__slide"
+                custom={i + 1}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-lg">
+                        {testimonial.initial}
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 leading-tight">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-gray-500 text-sm">
+                        @{testimonial.username}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+
+                  {/* Star Rating */}
+                  <div className="flex mt-4">
+                    {[...Array(5)].map((_, starIndex) => (
+                      <svg
+                        key={starIndex}
+                        className="w-4 h-4 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-center mt-8 gap-4">
+            <button
+              onClick={() => instanceRef.current?.prev()}
+              className="p-2 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200"
+              aria-label="Previous testimonial"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
+              <ChevronLeft className="w-5 h-5 text-gray-600" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex gap-2">
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => instanceRef.current?.moveToIdx(idx)}
+                  className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                    currentSlide === idx
+                      ? "bg-[#003300]"
+                      : "bg-gray-300 hover:bg-gray-400"
+                  }`}
+                  aria-label={`Go to testimonial ${idx + 1}`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() => instanceRef.current?.next()}
+              className="p-2 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-5 h-5 text-gray-600" />
+            </button>
+          </div>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 }

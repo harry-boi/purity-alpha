@@ -44,10 +44,10 @@ export default function ExperienceSmartFinanceSection() {
                 for everyday users.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-4">
+              <div className="flex flex-wrap sm:flex-row items-center justify-center md:justify-start gap-4 mb-4">
                 <a
                   href="#"
-                  className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-2"
+                  className="text-white px-6 py-3 rounded-xl flex items-center gap-2 bg-white/10 border border-white/30 backdrop-blur-sm transition hover:bg-white/20"
                 >
                   <img
                     src={`${import.meta.env.BASE_URL}apple_logo.png`}
@@ -58,7 +58,7 @@ export default function ExperienceSmartFinanceSection() {
                 </a>
                 <a
                   href="#"
-                  className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-2"
+                  className="text-white px-6 py-3 rounded-xl flex items-center gap-2 bg-white/10 border border-white/30 backdrop-blur-sm transition hover:bg-white/20"
                 >
                   <img
                     src={`${import.meta.env.BASE_URL}android_logo.png`}
