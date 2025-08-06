@@ -139,16 +139,16 @@ export default function HeroSection() {
       </motion.div>
       {/* Hero Section */}
       <motion.div
-        className="mx-auto px-4 sm:px-6 md:px-10 pb-16 bg-[#F9FFEA] w-full overflow-x-hidden"
+        className="mx-auto px-4 sm:px-6 text-center md:text-start md:px-10 pb-16 bg-[#F9FFEA] w-full overflow-x-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <div className="grid grid-cols-1 px-16 lg:grid-cols-2 md:gap-12 items-center w-full py-10 md:py-20">
+        <div className="grid grid-cols-1 md:px-16 lg:grid-cols-2 gap-4 md:gap-12 items-center w-full py-10 md:py-20">
           {/* Left */}
           <motion.div
-            className="space-y-6 bg-blue sm:px-4 lg:px-16 md:px-0"
+            className="space-y-6 bg-blue sm:px-2 lg:px-16 md:px-0"
             variants={fadeInLeft}
             initial="hidden"
             whileInView="visible"
@@ -162,7 +162,7 @@ export default function HeroSection() {
                 2000,
                 "",
                 500,
-                <h1 className="text-2xl lg:text-5xl font-bold text-[#123017] leading-tight">
+                <h1 className="text-2xl lg:text-5xl font-bold text-[#123017] leading-tight text-center lg:text-left">
                   Save, Invest and Earn
                   <br />
                   Interest in Crypto
@@ -177,13 +177,15 @@ export default function HeroSection() {
               Earn daily interest with flexible or locked USDT savings and
               investment plans.
             </p>
-            <button className="mt-10 text-lg text-[#123017] font-medium py-3 rounded-full flex items-center">
-              <span className="mr-3">Get Started Today</span>
-              <img
-                src={`${import.meta.env.BASE_URL}nextarrowicon.png`}
-                className="w-4 h-4 align-baseline"
-              />
-            </button>
+            <div className="flex justify-center lg:justify-start">
+              <button className="mt-10 text-lg text-[#123017] font-medium py-3 rounded-full flex items-center">
+                <span className="mr-3">Get Started Today</span>
+                <img
+                  src={`${import.meta.env.BASE_URL}nextarrowicon.png`}
+                  className="w-4 h-4 align-baseline"
+                />
+              </button>
+            </div>
           </motion.div>
           {/* Right - Illustration */}
           <motion.div
@@ -194,7 +196,7 @@ export default function HeroSection() {
             viewport={{ once: true, amount: 0.3 }}
           >
             {/* Placeholder for person */}
-            <div className="w-[480px] h-[400px] md:w-[600px] md:h-[500px] rounded-lg overflow-hidden relative z-20 flex items-center justify-center">
+            <div className="w-[550px] h-[400px] md:w-[600px] md:h-[500px] rounded-lg overflow-hidden relative z-20 flex items-center justify-center">
               <img
                 src={illustration1}
                 alt="Illustration"

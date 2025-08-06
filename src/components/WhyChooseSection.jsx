@@ -46,14 +46,14 @@ export default function WhyChooseSection() {
         <div className="grid md:grid-cols-3 gap-4 w-full mb-16">
           {/* Card 1 */}
           <motion.div
-            className="bg-[#f7fce7] rounded-2xl p-8 py-6 text-center flex flex-col items-center shadow-sm"
+            className="bg-[#f7fce7] rounded-2xl p-8 py-6 text-center flex flex-col items-center"
             custom={1}
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#f7fce7] rounded-full">
+            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#F7F6DA] rounded-full">
               {/* Shield Icon */}
               <img
                 src={`${import.meta.env.BASE_URL}securedimage.png`}
@@ -71,14 +71,14 @@ export default function WhyChooseSection() {
           </motion.div>
           {/* Card 2 */}
           <motion.div
-            className="bg-[#f7f7fd] rounded-2xl p-8 py-6 text-center flex flex-col items-center shadow-sm"
+            className="bg-[#f7f7fd] rounded-2xl p-8 py-6 text-center flex flex-col items-center"
             custom={2}
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#f7f7fd] rounded-full">
+            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#F4F0FF] rounded-full">
               {/* Chart Icon */}
               <img
                 src={`${import.meta.env.BASE_URL}roi_image.png`}
@@ -96,14 +96,14 @@ export default function WhyChooseSection() {
           </motion.div>
           {/* Card 3 */}
           <motion.div
-            className="bg-[#e7faf7] rounded-2xl p-8 pb-10 text-center flex flex-col items-center shadow-sm"
+            className="bg-[#e7faf7] rounded-2xl p-8 pb-10 text-center flex flex-col items-center"
             custom={3}
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#e7faf7] rounded-full">
+            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#DDF2EB] rounded-full">
               {/* No Fee Icon */}
               <img
                 src={`${import.meta.env.BASE_URL}nohidden_charges.png`}

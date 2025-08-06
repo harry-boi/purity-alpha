@@ -25,8 +25,8 @@ export default function FooterSection() {
     >
       <footer className="text-white px-8 md:px-16">
         <div className="w-full">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col md:flex-row lg:justify-between gap-20 mb-8">
+          <div className="max-w-7xl mx-auto md:px-6">
+            <div className="flex flex-col-reverse md:flex-row lg:justify-between gap-20 mb-8">
               {/* Left Column - Logo & Contact */}
               <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
                 <div className="flex items-center gap-2 mb-4">
@@ -108,7 +108,7 @@ export default function FooterSection() {
               </div>
 
               {/* Right Column - Links & Newsletter */}
-              <div className="w-full lg:w-2/3 flex flex-col">
+              <div className="w-full lg:w-2/3 flex flex-col-reverse md:flex-col">
                 <div className="w-full flex md:justify-end">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 w-full md:w-[80%] lg:w-[75%]">
                     {/* Links */}
@@ -173,7 +173,7 @@ export default function FooterSection() {
                 {/* Newsletter */}
                 <div className="w-full md:w-[80%] lg:w-[75%] mt-2 md:ml-auto">
                   <div className="text-sm text-gray-300 mb-4 text-left">
-                    <p className="font-thin text-base whitespace-nowrap">
+                    <p className="font-thin text-base">
                       Sign up now to follow investment tips & exclusive deals
                       offers and updates from us
                     </p>
@@ -181,13 +181,13 @@ export default function FooterSection() {
                   <h3 className="text-white font-semibold mb-4 text-left">
                     SUBSCRIBE TO NEWSLETTER
                   </h3>
-                  <div className="space-y-3 flex flex-col md:flex-row md:items-center md:space-y-0 md:space-x-3">
+                  <div className="space-y-3 flex mb-4 flex-col md:flex-row md:items-center md:space-y-0 md:space-x-3">
                     <input
                       type="email"
                       placeholder="Enter email address"
-                      className="w-full md:w-auto flex-1 px-5 py-5 bg-[#F6F6F61F] rounded-2xl text-white placeholder:text-gray-400 placeholder:text-[14px] focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-500 text-sm"
+                      className="w-full md:w-auto flex-1 px-5 py-3 md:py-5 bg-[#F6F6F61F] rounded-2xl text-white placeholder:text-gray-400 placeholder:text-[14px] focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-500 text-sm"
                     />
-                    <button className="w-full md:w-auto px-10 py-5 text-gray-800 bg-gray-100 hover:bg-gray-100 font-medium rounded-2xl transition-colors text-sm">
+                    <button className="w-full md:w-auto px-10 py-3 md:py-5 text-gray-800 bg-gray-100 hover:bg-gray-100 font-medium rounded-2xl transition-colors text-sm">
                       Subscribe
                     </button>
                   </div>

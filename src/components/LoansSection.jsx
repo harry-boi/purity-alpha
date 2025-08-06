@@ -46,7 +46,7 @@ export default function LoansSection() {
       viewport={{ once: false, amount: 0.3 }}
       variants={fadeIn}
     >
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-4 items-center">
+      <div className="container text-center md:text-start mx-auto px-4 grid lg:grid-cols-2 gap-4 items-center">
         {/* Left - Woman Illustration */}
         <motion.div
           className="flex justify-center relative"
@@ -70,7 +70,7 @@ export default function LoansSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-2xl lg:text-2xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-[#1A4420] mb-4">
             Get instant low
             <br />
             interest Crypto Loans
@@ -79,13 +79,15 @@ export default function LoansSection() {
             Access instant loans secured by your BTC, with flexible or fixed
             repayment options.
           </p>
-          <button className="py-3 text-lg font-medium rounded-full text-[#1A4420] flex items-center">
-            <span>Get Started Today</span>
-            <img
-              src={`${import.meta.env.BASE_URL}nextarrowicon.png`}
-              className="w-4 h-4 ml-2"
-            />
-          </button>
+          <div className="flex justify-center md:justify-start">
+            <button className="py-3 text-lg font-medium rounded-full text-[#1A4420] flex items-center">
+              <span>Get Started Today</span>
+              <img
+                src={`${import.meta.env.BASE_URL}nextarrowicon.png`}
+                className="w-4 h-4 ml-2"
+              />
+            </button>
+          </div>
         </motion.div>
       </div>
     </motion.div>

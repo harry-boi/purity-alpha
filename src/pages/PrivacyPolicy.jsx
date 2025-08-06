@@ -25,8 +25,12 @@ const tabs = [
   },
 ];
 
-export default function PrivacyPolicy() {
-  const [activeTab, setActiveTab] = useState("privacy");
+export default function PrivacyPolicy({ initialTab }) {
+  const [activeTab, setActiveTab] = useState(
+    initialTab && ["privacy", "terms", "aml"].includes(initialTab)
+      ? initialTab
+      : "privacy"
+  );
 
   const currentTab = tabs.find((tab) => tab.key === activeTab);
 
@@ -44,7 +48,7 @@ export default function PrivacyPolicy() {
         }}
       >
         {/* Header */}
-        <header className="flex justify-between items-center max-w-full md:py-1 relative z-10 px-4 md:px-8 lg:px-16">
+        <header className="flex justify-between items-center max-w-full mb-4 md:py-1 relative z-10 px-4 md:px-8 lg:px-16">
           <div className="flex space-x-2 md:px-0 md:pl-18">
             <div>
               <img
@@ -55,10 +59,10 @@ export default function PrivacyPolicy() {
             </div>
           </div>
         </header>
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="max-w-3xl mx-auto px-4 py-5">
           <div className="text-3xl font-bold mb-3">{currentTab.title}</div>
-          <p className="mb-6">{currentTab.subtitle}</p>
-          <div className="flex justify-center gap-4 flex-wrap">
+          <p className="mb-6 text-center">{currentTab.subtitle}</p>
+          <div className="hidden md:flex justify-center gap-4 flex-wrap">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
@@ -79,7 +83,7 @@ export default function PrivacyPolicy() {
       {/* Content Section */}
       <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-12">
         {/* Sidebar */}
-        <div className="w-full lg:w-1/4 space-y-4">
+        <div className="hidden md:block w-full lg:w-1/4 space-y-4">
           {tabs.map((tab) => (
             <button
               key={tab.key}

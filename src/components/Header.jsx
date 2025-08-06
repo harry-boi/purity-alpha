@@ -18,7 +18,7 @@ export default function Header() {
     >
       {/* Header */}
       <header className="flex justify-between items-center max-w-full md:py-1 relative z-10 px-4 md:px-8 lg:px-16">
-        <div className="flex space-x-2 py-8 md:py-10 md:px-0 md:pl-18">
+        <div className="flex space-x-2 py-4 md:py-10 md:px-0 md:pl-18">
           <div>
             <img
               src={`${import.meta.env.BASE_URL}purity_capital_logo.png`}
@@ -43,27 +43,28 @@ export default function Header() {
         }}
       >
         {/* Left Content */}
-        <div className="flex-[2] lg:min-w-[600px] min-w-0 lg:pr-10 flex flex-col justify-center px-6 md:px-10">
-          <h1 className="text-white text-5xl md:text-[77px] lg:text-6xl xl:text-7xl font-bold leading-none mb-4 md:mb-6">
+        <div className="flex-[2] lg:min-w-[600px] min-w-0 lg:pr-10 flex flex-col justify-start md:justify-center px-6 md:px-10 text-center md:text-left mb-24 md:mb-0 pt-8 md:pt-0">
+          <h1 className="text-white text-center md:text-left text-4xl md:text-5xl md:text-[77px] lg:text-6xl xl:text-7xl font-bold leading-none mb-4 md:mb-6">
             Your digital <br /> money works <br /> smarter
           </h1>
           <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 font-normal text-2xl">
-            <p className="text-white text-base md:text-2xl lg:text-2xl">
+            <p className="text-white text-base md:text-2xl lg:text-2xl text-center md:text-left">
               Secure Your Financial Future with Crypto <br /> Save, Invest and
               Borrow - All in One Trusted App
             </p>
           </div>
-          <p className="text-white  text-2xl max-w-lg font-normal">
+          <p className="text-white text-base md:text-2xl max-w-lg font-normal text-center md:text-left">
             Experience crypto-powered financial growth, simplified for everyone.
           </p>
         </div>
 
         {/* Right Content */}
-        <div className="flex-[2] flex md:items-end md:justify-start min-w-[320px] md:min-w-[400px] lg:min-w-[630px]">
+        <div className="flex-[2] flex md:items-end md:justify-start min-w-[320px] md:min-w-[400px] lg:min-w-[630px] relative">
           <img
             src={`${import.meta.env.BASE_URL}phone.png`}
             alt="Mobile app interface"
-            className="w-[320px] md:w-[900px] lg:w-[900px] xl:w-[900px] h-auto object-contain"
+            className="w-[320px] md:w-[900px] lg:w-[900px] xl:w-[900px] h-auto object-contain absolute left-1/2 -translate-x-1/2 bottom-0 md:static md:left-auto md:translate-x-0 md:bottom-auto"
+            style={{ marginBottom: 0 }}
           />
         </div>
       </div>

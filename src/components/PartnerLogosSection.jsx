@@ -125,7 +125,7 @@ export default function PartnerLogosSection() {
       className="bg-white py-12 px-4 md:px-0"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
       <div className="max-w-6xl mx-auto">

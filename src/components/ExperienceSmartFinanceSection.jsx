@@ -16,15 +16,15 @@ const fadeInUp = {
 export default function ExperienceSmartFinanceSection() {
   return (
     <motion.section
-      className="py-10 px-4 md:px-0"
+      className="py-10 md:px-4"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full md:max-w-6xl mx-auto">
         <section
-          className="w-full bg-[#003300] text-white overflow-hidden rounded-4xl"
+          className="w-full bg-[#003300] text-white overflow-hidden md:rounded-4xl"
           style={{
             backgroundImage: `url('${
               import.meta.env.BASE_URL
@@ -34,9 +34,9 @@ export default function ExperienceSmartFinanceSection() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="max-w-7xl items-end mx-auto flex flex-col lg:flex-row justify-between px-6 md:px-10 lg:px-20 gap-12 pt-20">
+          <div className="max-w-7xl items-end mx-auto flex flex-col lg:flex-row justify-between px-6 md:px-10 lg:px-20 md:gap-12 gap-4 pt-20">
             {/* Left Content */}
-            <div className="flex-1 text-center lg:text-left pb-16">
+            <div className="flex-1 text-center lg:text-left md:pb-16">
               <h2 className="text-3xl lg:text-4xl font-semibold leading-none mb-6">
                 Experience smart finance <br className="hidden md:block" />
                 with Purity Capital
@@ -48,7 +48,7 @@ export default function ExperienceSmartFinanceSection() {
               </p>
 
               {/* Download Buttons */}
-              <div className="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4 mb-6">
+              <div className="flex sm:flex-row sm:justify-center lg:justify-start gap-4 mb-6">
                 <button className="group bg-white/10 text-white hover:text-gray-900 px-5 py-3 rounded-xl flex items-center justify-center transition hover:bg-[#C0FF31]">
                   <img
                     src={`${import.meta.env.BASE_URL}apple_logo.png`}
@@ -60,7 +60,7 @@ export default function ExperienceSmartFinanceSection() {
                     alt="Apple Dark"
                     className="w-7 h-7 mr-2 hidden group-hover:block"
                   />
-                  Get on iPhone
+                  <span className="whitespace-nowrap">Get on iPhone</span>
                 </button>
 
                 <button className="group bg-white/10 text-white hover:text-gray-900 px-5 py-3 rounded-xl flex items-center justify-center transition hover:bg-[#C0FF31]">
@@ -74,7 +74,7 @@ export default function ExperienceSmartFinanceSection() {
                     alt="Android Dark"
                     className="w-7 h-7 mr-2 hidden group-hover:block"
                   />
-                  Get on Android
+                  <span className="whitespace-nowrap">Get on Android</span>
                 </button>
               </div>
 
@@ -90,11 +90,11 @@ export default function ExperienceSmartFinanceSection() {
             </div>
 
             {/* Right Content - Phone Image */}
-            <div className="flex-1 flex justify-center">
+            <div className="flex-[2] md:flex-1 flex justify-center">
               <img
                 src={`${import.meta.env.BASE_URL}phone.png`}
                 alt="Mobile app preview"
-                className="w-[300px] md:w-[300px] lg:w-[400px] xl:w-[500px] h-auto object-contain"
+                className="w-[600px] md:w-[300px] lg:w-[400px] xl:w-[500px] h-auto object-contain"
               />
             </div>
           </div>

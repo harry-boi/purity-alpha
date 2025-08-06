@@ -67,7 +67,7 @@ export default function FAQSection() {
 
   return (
     <motion.section
-      className="bg-[#F6F6F6] py-16 mt-20 px-8 md:px-0 border-t border-gray-200"
+      className="bg-[#F6F6F6] py-16 mt-20 px-2 md:px-0 border-t border-gray-200"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -109,7 +109,7 @@ export default function FAQSection() {
                 aria-expanded={openIndex === i}
                 aria-controls={`faq-answer-${i}`}
               >
-                <span className="text-gray-900 font-medium text-base md:text-sm">
+                <span className="text-gray-900 font-medium text-base md:text-base">
                   {faq.q}
                 </span>
                 <svg
