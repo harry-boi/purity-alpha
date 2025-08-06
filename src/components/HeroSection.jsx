@@ -98,7 +98,7 @@ export default function HeroSection() {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* ROI Icon */}

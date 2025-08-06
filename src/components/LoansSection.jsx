@@ -43,7 +43,7 @@ export default function LoansSection() {
       className="bg-white py-16 overflow-x-hidden"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={fadeIn}
     >
       <div className="container text-center md:text-start mx-auto px-4 grid lg:grid-cols-2 gap-4 items-center">

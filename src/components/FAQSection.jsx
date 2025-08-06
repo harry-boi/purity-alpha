@@ -67,7 +67,7 @@ export default function FAQSection() {
 
   return (
     <motion.section
-      className="bg-[#F6F6F6] py-16 mt-20 px-2 md:px-0 border-t border-gray-200"
+      className="bg-[#F6F6F6] py-16 mt-20 px-2 md:px-0 border-t border-gray-200 overflow-x-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
