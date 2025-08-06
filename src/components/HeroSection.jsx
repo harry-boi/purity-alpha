@@ -56,7 +56,7 @@ export default function HeroSection() {
       className="relative overflow-hidden w-full"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={fadeIn}
     >
       {/* Feature Cards */}
@@ -64,7 +64,7 @@ export default function HeroSection() {
         className="container w-full"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
       >
         <div className="grid grid-cols-1 w-full px-4 sm:px-6 md:px-10 py-6 h-full md:grid-cols-3 gap-6 max-w-4xl lg:max-w-5xl mx-auto">
@@ -75,7 +75,7 @@ export default function HeroSection() {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* Lock Icon */}
@@ -120,7 +120,7 @@ export default function HeroSection() {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <div className="w-8 h-8 rounded flex items-center justify-center">
               {/* Fee Icon */}
@@ -142,7 +142,7 @@ export default function HeroSection() {
         className="mx-auto px-4 sm:px-6 text-center md:text-start md:px-10 pb-16 bg-[#F9FFEA] w-full overflow-x-hidden"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
       >
         <div className="grid grid-cols-1 md:px-16 lg:grid-cols-2 gap-4 md:gap-12 items-center w-full py-10 md:py-20">
@@ -152,7 +152,7 @@ export default function HeroSection() {
             variants={fadeInLeft}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <TypeAnimation
               sequence={[
