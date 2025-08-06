@@ -145,10 +145,10 @@ export default function HeroSection() {
         viewport={{ once: false, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center w-full py-10 md:py-20">
+        <div className="grid grid-cols-1 px-16 lg:grid-cols-2 md:gap-12 items-center w-full py-10 md:py-20">
           {/* Left */}
           <motion.div
-            className="space-y-6 px-2 sm:px-4 md:px-0"
+            className="space-y-6 bg-blue sm:px-4 lg:px-16 md:px-0"
             variants={fadeInLeft}
             initial="hidden"
             whileInView="visible"
@@ -162,7 +162,7 @@ export default function HeroSection() {
                 2000,
                 "",
                 500,
-                <h1 className="text-4xl lg:text-5xl font-bold text-[#123017] leading-tight">
+                <h1 className="text-2xl lg:text-5xl font-bold text-[#123017] leading-tight">
                   Save, Invest and Earn
                   <br />
                   Interest in Crypto
@@ -173,11 +173,11 @@ export default function HeroSection() {
               speed={40}
               repeat={Infinity}
             />
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed">
               Earn daily interest with flexible or locked USDT savings and
               investment plans.
             </p>
-            <button className="hover:bg-gray-800 mt-10 text-[#123017] font-medium py-3 rounded-full flex items-center">
+            <button className="mt-10 text-lg text-[#123017] font-medium py-3 rounded-full flex items-center">
               <span className="mr-3">Get Started Today</span>
               <img
                 src={`${import.meta.env.BASE_URL}nextarrowicon.png`}
@@ -187,89 +187,19 @@ export default function HeroSection() {
           </motion.div>
           {/* Right - Illustration */}
           <motion.div
-            className="relative min-h-[350px] flex items-center justify-center"
+            className="relative min-h-[400px] flex items-center justify-center"
             variants={fadeInRight}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             {/* Placeholder for person */}
-            <div className="w-96 h-80 rounded-lg overflow-hidden relative z-20 flex items-center justify-center">
+            <div className="w-[480px] h-[400px] md:w-[600px] md:h-[500px] rounded-lg overflow-hidden relative z-20 flex items-center justify-center">
               <img
                 src={illustration1}
                 alt="Illustration"
                 className="w-full h-full object-cover"
               />
-            </div>
-
-            {/* Floating Cards */}
-            <div className="absolute top-12 -left-4 z-30 bg-[#004E9C] text-white p-3 rounded-lg shadow-lg w-52">
-              <h3 className="font-semibold text-sm">Lagos Big Boys/Girls</h3>
-              <p className="text-xl font-bold">$5,000</p>
-              <div className="flex items-center space-x-3 text-xs mt-1">
-                <div className="flex items-center space-x-1">
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12,6 12,12 16,14"></polyline>
-                  </svg>
-                  <span>365 Days</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                    />
-                  </svg>
-                  <span>15% p.a</span>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-16 right-2 z-30 bg-[#FFF9DC] text-gray-900 p-3 rounded-lg shadow-lg w-48">
-              <h3 className="font-semibold text-sm">Ileya Reloaded</h3>
-              <p className="text-xl font-bold">$250</p>
-              <div className="flex items-center space-x-3 text-xs mt-1">
-                <div className="flex items-center space-x-1">
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12,6 12,12 16,14"></polyline>
-                  </svg>
-                  <span>30 Days</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                    />
-                  </svg>
-                  <span>12% p.a</span>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>

@@ -127,12 +127,11 @@ export default function TestimonialsSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            What Our Clients Say
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Testimonials
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Join thousands of satisfied investors who trust Purity Capital with
-            their crypto investments
+          <p className="text-gray-600 max-w-2xl mx-auto text-xl">
+            See what our clients say about their experience with Purity Capital.
           </p>
         </motion.div>
 
@@ -154,7 +153,7 @@ export default function TestimonialsSection() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-white mx-4 rounded-4xl p-6 border border-gray-100 h-full hover:shadow-xl duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r bg-gray-200 rounded-full flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-lg">
@@ -191,40 +190,15 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          {/* Navigation Controls */}
-          <div className="flex items-center justify-center mt-8 gap-4">
-            <button
-              onClick={() => instanceRef.current?.prev()}
-              className="p-2 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-5 h-5 text-gray-600" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex gap-2">
-              {testimonials.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => instanceRef.current?.moveToIdx(idx)}
-                  className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                    currentSlide === idx
-                      ? "bg-[#003300]"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                  aria-label={`Go to testimonial ${idx + 1}`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={() => instanceRef.current?.next()}
-              className="p-2 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-5 h-5 text-gray-600" />
-            </button>
-          </div>
+          {/* Single Next Arrow Control */}
+          <button
+            onClick={() => instanceRef.current?.next()}
+            className="absolute top-1/2 right-2 md:right-4 -translate-y-1/2 z-20 p-2 rounded-full bg-[#C0FF31] shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200 flex items-center justify-center"
+            aria-label="Next testimonial"
+            style={{ transform: "translateY(-50%)" }}
+          >
+            <ChevronRight className="w-6 h-6 text-gray-600" />
+          </button>
         </div>
       </div>
     </div>

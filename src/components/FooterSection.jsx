@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const fadeIn = {
@@ -16,13 +17,13 @@ const fadeIn = {
 export default function FooterSection() {
   return (
     <motion.footer
-      className="bg-[#101515] text-white px-4 md:px-16 pt-14 pb-6"
+      className="bg-[#101515] text-white pt-14 pb-6"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeIn}
     >
-      <footer className="text-white">
+      <footer className="text-white px-8 md:px-16">
         <div className="w-full">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row lg:justify-between gap-20 mb-8">
@@ -31,6 +32,7 @@ export default function FooterSection() {
                 <div className="flex items-center gap-2 mb-4">
                   <img
                     src={`${import.meta.env.BASE_URL}purity_capital_logo.png`}
+                    alt="Purity Capital Logo"
                   />
                 </div>
                 <div className="space-y-2 text-sm text-gray-300">
@@ -38,6 +40,7 @@ export default function FooterSection() {
                   <p>Lagos State, Nigeria</p>
                   <div className="flex items-center gap-2 mt-3">
                     <span className="text-gray-400">
+                      {/* Mail Icon */}
                       <svg
                         width="25"
                         height="25"
@@ -63,6 +66,7 @@ export default function FooterSection() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-gray-400">
+                      {/* Phone Icon */}
                       <svg
                         width="25"
                         height="25"
@@ -102,91 +106,74 @@ export default function FooterSection() {
                   <p className="mt-3">Add License Details below</p>
                 </div>
               </div>
+
               {/* Right Column - Links & Newsletter */}
               <div className="w-full lg:w-2/3 flex flex-col">
                 <div className="w-full flex md:justify-end">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 w-full md:w-[80%] lg:w-[75%]">
-                    {/* Quick Links */}
-                    <div>
-                      <h3 className="text-white font-semibold mb-4">
-                        Quick Links
-                      </h3>
-                      <div className="space-y-3">
-                        <a
-                          href="/"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          Home
-                        </a>
-                        <a
-                          href="/faqs"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          FAQs
-                        </a>
-                        <a
-                          href="/contact"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          Contact us
-                        </a>
+                    {/* Links */}
+                    {[
+                      {
+                        title: "Quick Links",
+                        links: [
+                          { name: "Home", href: "/" },
+                          { name: "FAQs", href: "/faqs" },
+                          { name: "Contact us", href: "/contact" },
+                        ],
+                      },
+                      {
+                        title: "Policy",
+                        links: [
+                          { name: "Privacy Policy", href: "/privacy" },
+                          { name: "Terms of Use", href: "/terms" },
+                          { name: "AML Policy", href: "/aml" },
+                        ],
+                      },
+                      {
+                        title: "Socials",
+                        links: [
+                          { name: "Instagram", href: "#" },
+                          { name: "X (Twitter)", href: "#" },
+                          { name: "Facebook", href: "#" },
+                        ],
+                      },
+                    ].map((section, idx) => (
+                      <div key={idx}>
+                        <h3 className="text-white font-semibold mb-4 px-3 text-left">
+                          {section.title}
+                        </h3>
+                        <div className="space-y-3 flex flex-col items-start text-left">
+                          {section.links.map((link, i) =>
+                            link.href.startsWith("/") ? (
+                              <Link
+                                key={i}
+                                to={link.href}
+                                className="block text-left text-gray-300 text-base transition-all duration-200 ease-in-out px-3 py-2 rounded-md hover:text-[#C0FF31] hover:bg-white/10"
+                              >
+                                {link.name}
+                              </Link>
+                            ) : (
+                              <a
+                                key={i}
+                                href={link.href}
+                                className="block text-left text-gray-300 text-base transition-all duration-200 ease-in-out px-3 py-2 rounded-md hover:text-[#C0FF31] hover:bg-white/10"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {link.name}
+                              </a>
+                            )
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    {/* Policy */}
-                    <div>
-                      <h3 className="text-white font-semibold mb-4">Policy</h3>
-                      <div className="space-y-3">
-                        <a
-                          href="/privacy"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          Privacy Policy
-                        </a>
-                        <a
-                          href="/terms"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          Terms of Use
-                        </a>
-                        <a
-                          href="/aml"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          AML Policy
-                        </a>
-                      </div>
-                    </div>
-                    {/* Socials */}
-                    <div>
-                      <h3 className="text-white font-semibold mb-4">Socials</h3>
-                      <div className="space-y-3">
-                        <a
-                          href="#"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          Instagram
-                        </a>
-                        <a
-                          href="#"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          X (Twitter)
-                        </a>
-                        <a
-                          href="#"
-                          className="block text-gray-300 hover:text-white text-sm transition-colors"
-                        >
-                          Facebook
-                        </a>
-                      </div>
-                    </div>
+                    ))}
                   </div>
-                </div>{" "}
-                {/* close grid links wrapper */}
-                {/* Newsletter Under Links, left-aligned under Quick Links */}
+                </div>
+
+                {/* Newsletter */}
                 <div className="w-full md:w-[80%] lg:w-[75%] mt-2 md:ml-auto">
                   <div className="text-sm text-gray-300 mb-4 text-left">
-                    <p>
+                    <p className="font-thin text-base whitespace-nowrap">
                       Sign up now to follow investment tips & exclusive deals
                       offers and updates from us
                     </p>
@@ -198,9 +185,9 @@ export default function FooterSection() {
                     <input
                       type="email"
                       placeholder="Enter email address"
-                      className="w-full md:w-auto flex-1 px-3 py-2 bg-[#F6F6F61F] border border-gray-600 rounded-md text-white placeholder:text-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-500 text-sm"
+                      className="w-full md:w-auto flex-1 px-5 py-5 bg-[#F6F6F61F] rounded-2xl text-white placeholder:text-gray-400 placeholder:text-[14px] focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-500 text-sm"
                     />
-                    <button className="w-full md:w-auto px-8 py-2 text-gray-800 bg-gray-100 hover:bg-gray-100 font-medium rounded-md transition-colors text-sm">
+                    <button className="w-full md:w-auto px-10 py-5 text-gray-800 bg-gray-100 hover:bg-gray-100 font-medium rounded-2xl transition-colors text-sm">
                       Subscribe
                     </button>
                   </div>
@@ -208,14 +195,14 @@ export default function FooterSection() {
               </div>
             </div>
           </div>
-          {/* Bottom Copyright */}
-          <div className="border-t border-gray-600 w-full pt-6 text-center">
-            <p className="text-gray-400 text-sm">
-              PurityCapital© 2025 - All Right Reserved
-            </p>
-          </div>
         </div>
       </footer>
+      {/* Copyright */}
+      <div className="border-t border-gray-600 w-full pt-6 text-center">
+        <p className="text-gray-400 text-sm">
+          PurityCapital© 2025 - All Right Reserved
+        </p>
+      </div>
     </motion.footer>
   );
 }

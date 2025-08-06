@@ -56,7 +56,10 @@ export default function LoansSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className="relative rounded-lg flex items-center justify-center overflow-hidden">
-            <img src={illustration2} className="w-2/3" />
+            <img
+              src={illustration2}
+              className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[600px]"
+            />
           </div>
         </motion.div>
         {/* Right - Text */}
@@ -67,16 +70,16 @@ export default function LoansSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl lg:text-2xl font-bold text-gray-900 mb-4">
             Get instant low
             <br />
             interest Crypto Loans
           </h2>
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-xl text-gray-600 mb-6">
             Access instant loans secured by your BTC, with flexible or fixed
             repayment options.
           </p>
-          <button className="py-3 font-medium rounded-full text-[#1A4420] flex items-center">
+          <button className="py-3 text-lg font-medium rounded-full text-[#1A4420] flex items-center">
             <span>Get Started Today</span>
             <img
               src={`${import.meta.env.BASE_URL}nextarrowicon.png`}

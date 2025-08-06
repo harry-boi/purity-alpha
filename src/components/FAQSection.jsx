@@ -85,7 +85,7 @@ export default function FAQSection() {
           <img
             src={`${import.meta.env.BASE_URL}faq_icon.png`}
             alt="FAQ Icon"
-            className="w-16 h-16 md:w-20 md:h-20 mb-2"
+            className="w-32 h-32 md:w-40 md:h-40 mb-2"
           />
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             Got Questions? We’ve
@@ -139,11 +139,9 @@ export default function FAQSection() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                {openIndex === i && (
-                  <div className="pt-3 text-gray-700 text-sm md:text-base">
-                    {faq.a}
-                  </div>
-                )}
+                <div className="pt-3 text-gray-700 text-sm md:text-base">
+                  {faq.a}
+                </div>
               </motion.div>
             </div>
           ))}

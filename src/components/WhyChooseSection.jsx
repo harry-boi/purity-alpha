@@ -27,15 +27,15 @@ const fadeIn = {
 export default function WhyChooseSection() {
   return (
     <motion.section
-      className="bg-white py-16 px-4 md:px-0"
+      className="bg-white py-16 md:px-0"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
-      <div className="max-w-5xl mx-auto px-5">
+      <div className="max-w-8xl mx-auto px-5">
         <motion.h2
-          className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12"
+          className="text-2xl md:text-3xl font-bold text-center text-[#002A32] mb-12"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
@@ -43,24 +43,27 @@ export default function WhyChooseSection() {
         >
           Why Choose Purity Capital?
         </motion.h2>
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-4 w-full mb-16">
           {/* Card 1 */}
           <motion.div
-            className="bg-[#f7fce7] rounded-2xl p-8 text-center flex flex-col items-center shadow-sm"
+            className="bg-[#f7fce7] rounded-2xl p-8 py-6 text-center flex flex-col items-center shadow-sm"
             custom={1}
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full shadow">
+            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#f7fce7] rounded-full">
               {/* Shield Icon */}
-              <img src={`${import.meta.env.BASE_URL}securedimage.png`} />
+              <img
+                src={`${import.meta.env.BASE_URL}securedimage.png`}
+                className="h-10"
+              />
             </div>
-            <h3 className="font-semibold text-lg text-gray-900 mb-2">
+            <h3 className="font-semibold text-lg text-gray-900 mt-5">
               Secure & Encrypted Transactions
             </h3>
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <p className="text-[#1A1A1A] text-sm leading-relaxed mb-12 font-normal">
               Your data and funds are protected with bank-grade encryption and
               advanced security protocols. Every transaction is safe, private,
               and fully traceable.
@@ -68,21 +71,24 @@ export default function WhyChooseSection() {
           </motion.div>
           {/* Card 2 */}
           <motion.div
-            className="bg-[#f7f7fd] rounded-2xl p-8 text-center flex flex-col items-center shadow-sm"
+            className="bg-[#f7f7fd] rounded-2xl p-8 py-6 text-center flex flex-col items-center shadow-sm"
             custom={2}
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full shadow">
+            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#f7f7fd] rounded-full">
               {/* Chart Icon */}
-              <img src={`${import.meta.env.BASE_URL}roi_image.png`} />
+              <img
+                src={`${import.meta.env.BASE_URL}roi_image.png`}
+                className="h-10"
+              />
             </div>
-            <h3 className="font-semibold text-lg text-gray-900 mb-2">
+            <h3 className="font-semibold text-lg text-gray-900 mt-5">
               Smart, Transparent ROI System
             </h3>
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <p className="text-[#1A1A1A] text-sm leading-relaxed">
               Track your investment performance in real-time. Our system is
               designed to show you exactly how your earnings grow. No fixed
               promises, just real market results.
@@ -90,21 +96,24 @@ export default function WhyChooseSection() {
           </motion.div>
           {/* Card 3 */}
           <motion.div
-            className="bg-[#e7faf7] rounded-2xl p-8 text-center flex flex-col items-center shadow-sm"
+            className="bg-[#e7faf7] rounded-2xl p-8 pb-10 text-center flex flex-col items-center shadow-sm"
             custom={3}
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full shadow">
+            <div className="w-20 h-16 mb-4 flex items-center justify-center bg-[#e7faf7] rounded-full">
               {/* No Fee Icon */}
-              <img src={`${import.meta.env.BASE_URL}nohidden_charges.png`} />
+              <img
+                src={`${import.meta.env.BASE_URL}nohidden_charges.png`}
+                className="h-10"
+              />
             </div>
-            <h3 className="font-semibold text-lg text-gray-900 mb-2">
+            <h3 className="font-semibold text-lg text-gray-900 mt-5">
               Zero Hidden Charges
             </h3>
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <p className="text-[#1A1A1A] text-sm leading-relaxed">
               What you see is what you get. No surprise fees, no hidden costs —
               just honest crypto savings, loans, and investments.
             </p>

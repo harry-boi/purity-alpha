@@ -1,0 +1,128 @@
+import React, { useState } from "react";
+import ExperienceSmartFinanceSection from "../components/ExperienceSmartFinanceSection";
+
+const tabs = [
+  {
+    label: "Privacy Policy",
+    key: "privacy",
+    title: "Privacy Matters to Us",
+    subtitle:
+      "We're committed to protecting your personal data and ensuring transparency in how we collect, use, and store your information.",
+  },
+  {
+    label: "Terms of Use",
+    key: "terms",
+    title: "Our Terms of Use",
+    subtitle:
+      "Please read our terms carefully before using our services. By using our platform, you agree to be bound by them.",
+  },
+  {
+    label: "AML Policy",
+    key: "aml",
+    title: "Anti-Money Laundering Policy",
+    subtitle:
+      "We comply with AML regulations to protect our users and ensure a safe financial environment on our platform.",
+  },
+];
+
+export default function PrivacyPolicy() {
+  const [activeTab, setActiveTab] = useState("privacy");
+
+  const currentTab = tabs.find((tab) => tab.key === activeTab);
+
+  return (
+    <div className="min-h-screen bg-white text-gray-800 pb-20">
+      <div
+        className="w-full pb-20 pt-14 text-white text-center"
+        style={{
+          backgroundImage: `url('${
+            import.meta.env.BASE_URL
+          }background_image.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Header */}
+        <header className="flex justify-between items-center max-w-full md:py-1 relative z-10 px-4 md:px-8 lg:px-16">
+          <div className="flex space-x-2 md:px-0 md:pl-18">
+            <div>
+              <img
+                src={`${import.meta.env.BASE_URL}purity_capital_logo.png`}
+                alt="Purity Capital Logo"
+                className="w-28 md:w-32 h-auto"
+              />
+            </div>
+          </div>
+        </header>
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-3xl font-bold mb-3">{currentTab.title}</div>
+          <p className="mb-6">{currentTab.subtitle}</p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
+                className={`px-5 py-3 rounded-2xl font-medium ${
+                  activeTab === tab.key
+                    ? "bg-white text-green-900"
+                    : "bg-white/20 text-white hover:bg-white/30"
+                }`}
+                onClick={() => setActiveTab(tab.key)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-12">
+        {/* Sidebar */}
+        <div className="w-full lg:w-1/4 space-y-4">
+          {tabs.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`block text-left px-4 py-2 rounded-md transition ${
+                activeTab === tab.key
+                  ? "bg-[#F9FFEA] text-green-900 font-medium"
+                  : "hover:bg-gray-100 text-gray-700"
+              }`}
+              style={{ minWidth: "120px" }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Main Content */}
+        <div className="w-full lg:w-3/4">
+          <h1 className="text-3xl font-bold mb-2">{currentTab.label}</h1>
+          <p className="text-sm text-gray-500 mb-6">
+            Last updated: June 23rd, 2025
+          </p>
+          <div className="text-gray-700 space-y-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Ornare fringilla enim erat
+              sed sed vel tortor. Consectetur est nisi risus ipsum id pretium.
+              Duis mollis malesuada cursus amet elementum eu neque tempor elit.
+            </p>
+            <p>
+              In sagittis at vestibulum amet rutrum gravida. Egestas nulla lacus
+              eu aliquam. Feugiat quisque sapien malesuada et interdum vulputate
+              egestas. At pellentesque pulvinar mauris morbi egestas diam erat
+              quam.
+            </p>
+            <p>
+              Nunc a habitant vestibulum arcu imperdiet tortor interdum. Nec
+              ultricies urna consequat feugiat turpis. Tellus consectetur libero
+              sit placerat accumsan in commodo et.
+            </p>
+          </div>
+        </div>
+      </div>
+      <ExperienceSmartFinanceSection />
+    </div>
+  );
+}
