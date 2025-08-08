@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import illustration2 from "/src/assets/illustration2.png";
+import illustration2 from "/src/assets/illustration2.webp";
 
 const fadeIn = {
   hidden: { opacity: 0 },

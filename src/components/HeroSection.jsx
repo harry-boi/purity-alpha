@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import illustration1 from "/src/assets/illustration1.png";
+import illustration1 from "/src/assets/illustration1.webp";
 // Animation variants (copied from App.jsx)
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },

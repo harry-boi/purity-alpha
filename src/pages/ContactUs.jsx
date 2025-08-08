@@ -25,7 +25,7 @@ export default function ContactUs() {
 
         {/* Illustration at bottom of header */}
         <img
-          src={`${import.meta.env.BASE_URL}contact_illustration.png`}
+          src={`${import.meta.env.BASE_URL}contact_illustration.webp`}
           alt="Contact Illustration"
           className="mx-auto max-w-3xl w-full h-auto max-h-80 mt-[-60px] relative z-0 object-contain"
         />

@@ -92,7 +92,7 @@ export default function ExperienceSmartFinanceSection() {
             {/* Right Content - Phone Image */}
             <div className="flex-[2] md:flex-1 flex justify-center">
               <img
-                src={`${import.meta.env.BASE_URL}phone.png`}
+                src={`${import.meta.env.BASE_URL}phone.webp`}
                 alt="Mobile app preview"
                 className="w-[600px] md:w-[300px] lg:w-[400px] xl:w-[500px] h-auto object-contain"
               />
