@@ -10,7 +10,7 @@ export default function ContactUs() {
         style={{
           backgroundImage: `url('${
             import.meta.env.BASE_URL
-          }background_image.png')`,
+          }background_image.webp')`,
         }}
       >
         <div className="max-w-7xl mx-auto px-4 py-14 relative z-10">

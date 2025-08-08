@@ -61,7 +61,7 @@ export default function Header() {
         {/* Right Content */}
         <div className="flex-[2] flex md:items-end md:justify-start min-w-[320px] md:min-w-[400px] lg:min-w-[630px] relative">
           <img
-            src={`${import.meta.env.BASE_URL}phone.png`}
+            src={`${import.meta.env.BASE_URL}phone.webp`}
             alt="Mobile app interface"
             className="w-[320px] md:w-[900px] lg:w-[900px] xl:w-[900px] h-auto object-contain absolute left-1/2 -translate-x-1/2 bottom-0 md:static md:left-auto md:translate-x-0 md:bottom-auto"
             style={{ marginBottom: 0 }}

@@ -41,7 +41,7 @@ export default function PrivacyPolicy({ initialTab }) {
         style={{
           backgroundImage: `url('${
             import.meta.env.BASE_URL
-          }background_image.png')`,
+          }background_image.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
