@@ -8,6 +8,8 @@ import FAQs from "./pages/FAQs";
 import FooterSection from "./components/FooterSection";
 import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
+import DocumentTitleManager from "./components/DocumentTitleManager";
 
 export default function App() {
   React.useEffect(() => {
@@ -20,6 +22,8 @@ export default function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
+      <DocumentTitleManager />
+      <ScrollToTopButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />

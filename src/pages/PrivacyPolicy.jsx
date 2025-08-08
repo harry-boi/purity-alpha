@@ -107,22 +107,95 @@ export default function PrivacyPolicy({ initialTab }) {
             Last updated: June 23rd, 2025
           </p>
           <div className="text-gray-700 space-y-4">
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Ornare fringilla enim erat
-              sed sed vel tortor. Consectetur est nisi risus ipsum id pretium.
-              Duis mollis malesuada cursus amet elementum eu neque tempor elit.
-            </p>
-            <p>
-              In sagittis at vestibulum amet rutrum gravida. Egestas nulla lacus
-              eu aliquam. Feugiat quisque sapien malesuada et interdum vulputate
-              egestas. At pellentesque pulvinar mauris morbi egestas diam erat
-              quam.
-            </p>
-            <p>
-              Nunc a habitant vestibulum arcu imperdiet tortor interdum. Nec
-              ultricies urna consequat feugiat turpis. Tellus consectetur libero
-              sit placerat accumsan in commodo et.
-            </p>
+            {activeTab === "privacy" && (
+              <>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Ornare fringilla enim
+                  erat sed sed vel tortor. Consectetur est nisi risus ipsum id
+                  pretium. Duis mollis malesuada cursus amet elementum eu neque
+                  tempor elit.
+                </p>
+                <p>
+                  In sagittis at vestibulum amet rutrum gravida. Egestas nulla
+                  lacus eu aliquam. Feugiat quisque sapien malesuada et interdum
+                  vulputate egestas. At pellentesque pulvinar mauris morbi
+                  egestas diam erat quam.
+                </p>
+                <p>
+                  Nunc a habitant vestibulum arcu imperdiet tortor interdum. Nec
+                  ultricies urna consequat feugiat turpis. Tellus consectetur
+                  libero sit placerat accumsan in commodo et.
+                </p>
+              </>
+            )}
+            {activeTab === "terms" && (
+              <>
+                <p>
+                  By accessing or using Purity Capital, you agree to comply with
+                  and be bound by these Terms of Use. Please read them
+                  carefully.
+                </p>
+                <p>
+                  <strong>1. Eligibility:</strong> You must be at least 18 years
+                  old and have the legal capacity to enter into a binding
+                  agreement to use our services.
+                </p>
+                <p>
+                  <strong>2. Account Responsibility:</strong> You are
+                  responsible for maintaining the confidentiality of your
+                  account credentials and for all activities that occur under
+                  your account.
+                </p>
+                <p>
+                  <strong>3. Prohibited Activities:</strong> You agree not to
+                  use the platform for any unlawful, fraudulent, or abusive
+                  purpose, including but not limited to money laundering,
+                  terrorist financing, or violating any applicable laws.
+                </p>
+                <p>
+                  <strong>4. Risk Disclosure:</strong> Investing in crypto
+                  assets involves risk. You acknowledge and accept all risks
+                  associated with your investment decisions.
+                </p>
+                <p>
+                  <strong>5. Changes to Terms:</strong> We reserve the right to
+                  update these Terms of Use at any time. Continued use of the
+                  platform constitutes acceptance of the revised terms.
+                </p>
+                <p>
+                  For full details, please contact our support team or visit our
+                  website.
+                </p>
+              </>
+            )}
+            {activeTab === "aml" && (
+              <>
+                <p>
+                  Purity Capital is committed to complying with all applicable
+                  Anti-Money Laundering (AML) laws and regulations. We have
+                  implemented robust policies and procedures to detect, prevent,
+                  and report suspicious activities.
+                </p>
+                <p>
+                  <strong>1. Customer Verification:</strong> All users must
+                  complete identity verification (KYC) before accessing certain
+                  services.
+                </p>
+                <p>
+                  <strong>2. Monitoring & Reporting:</strong> Transactions are
+                  monitored for suspicious activity. Any suspicious transactions
+                  will be reported to the relevant authorities.
+                </p>
+                <p>
+                  <strong>3. Cooperation:</strong> We cooperate fully with law
+                  enforcement and regulatory agencies as required by law.
+                </p>
+                <p>
+                  For more information about our AML policy, please contact our
+                  compliance team.
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>

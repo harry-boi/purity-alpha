@@ -67,7 +67,7 @@ export default function HeroSection() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <div className="grid grid-cols-1 w-full px-4 sm:px-6 md:px-10 py-6 h-full md:grid-cols-3 gap-6 max-w-4xl lg:max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 w-full px-4 sm:px-6 md:px-10 py-6 my-8 h-full md:grid-cols-3 gap-6 max-w-4xl lg:max-w-5xl mx-auto">
           {/* Card 1 */}
           <motion.div
             className="flex items-start space-x-3"
@@ -77,15 +77,15 @@ export default function HeroSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-8 h-8 rounded flex items-center justify-center">
+            <div className="w-14 h-14 rounded flex items-center justify-center">
               {/* Lock Icon */}
               <img src={`${import.meta.env.BASE_URL}securedimage.png`} />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 text-sm">
+              <h3 className="font-semibold text-gray-900 text-base">
                 Modern & Secured
               </h3>
-              <p className="text-xs text-gray-600 mt-1">
+              <p className="text-sm text-gray-600 mt-1">
                 Your funds are secured with bank level security and modern
                 encryption
               </p>
@@ -100,15 +100,15 @@ export default function HeroSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-8 h-8 rounded flex items-center justify-center">
+            <div className="w-14 h-14 rounded flex items-center justify-center">
               {/* ROI Icon */}
               <img src={`${import.meta.env.BASE_URL}roi_image.png`} />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 text-sm">
+              <h3 className="font-semibold text-gray-900 text-base">
                 Transparent ROI System
               </h3>
-              <p className="text-xs text-gray-600 mt-1">
+              <p className="text-sm text-gray-600 mt-1">
                 Track your earnings in real time with our transparent system
               </p>
             </div>
@@ -122,15 +122,15 @@ export default function HeroSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="w-8 h-8 rounded flex items-center justify-center">
+            <div className="w-14 h-14 rounded flex items-center justify-center">
               {/* Fee Icon */}
               <img src={`${import.meta.env.BASE_URL}nohidden_charges.png`} />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 text-sm">
+              <h3 className="font-semibold text-gray-900 text-base">
                 Pay no Hidden Fees
               </h3>
-              <p className="text-xs text-gray-600 mt-1">
+              <p className="text-sm text-gray-600 mt-1">
                 No hidden charges, what you see is what you get
               </p>
             </div>
