@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/#/" />
+  </head>
+  <body>
+    <script>
+      // Redirect all paths to index.html for React Router Hash mode
+      var l = window.location;
+      var hash = l.hash || "";
+      if (!hash.startsWith("#/")) {
+        window.location.replace(
+          "/purity-alpha/#" +
+            l.pathname.replace("/purity-alpha", "") +
+            l.search +
+            l.hash
+        );
+      }
+    </script>
+  </body>
+</html>
