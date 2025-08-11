@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { href, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const fadeIn = {
@@ -119,6 +119,7 @@ export default function FooterSection() {
                           { name: "Home", href: "/" },
                           { name: "FAQs", href: "/faqs" },
                           { name: "Contact us", href: "/contact" },
+                          { name: "Others", href: "/others" },
                         ],
                       },
                       {

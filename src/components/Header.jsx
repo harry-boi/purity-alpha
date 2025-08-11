@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Header() {
   return (
@@ -43,7 +44,12 @@ export default function Header() {
         }}
       >
         {/* Left Content */}
-        <div className="flex-[2] lg:min-w-[600px] min-w-0 lg:pr-10 flex flex-col justify-start md:justify-center px-6 md:px-10 text-center md:text-left mb-24 md:mb-0 pt-8 md:pt-0">
+        <motion.div
+          className="flex-[2] lg:min-w-[600px] min-w-0 lg:pr-10 flex flex-col justify-start md:justify-center px-6 md:px-10 text-center md:text-left mb-24 md:mb-0 pt-8 md:pt-0"
+          initial={{ opacity: 0, x: -300 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        >
           <h1 className="text-white text-center md:text-left text-4xl md:text-5xl md:text-[77px] lg:text-6xl xl:text-7xl font-bold leading-none mb-4 md:mb-6">
             Your digital <br /> money works <br /> smarter
           </h1>
@@ -56,17 +62,22 @@ export default function Header() {
           <p className="text-white text-base md:text-2xl max-w-lg font-normal text-center md:text-left">
             Experience crypto-powered financial growth, simplified for everyone.
           </p>
-        </div>
+        </motion.div>
 
         {/* Right Content */}
-        <div className="flex-[2] flex md:items-end md:justify-start min-w-[320px] md:min-w-[400px] lg:min-w-[630px] relative">
+        <motion.div
+          className="flex-[2] flex md:items-end md:justify-start min-w-[320px] md:min-w-[400px] lg:min-w-[630px] relative"
+          initial={{ opacity: 0, x: 300 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
+        >
           <img
             src={`${import.meta.env.BASE_URL}phone.webp`}
             alt="Mobile app interface"
             className="w-[320px] md:w-[900px] lg:w-[900px] xl:w-[900px] h-auto object-contain absolute left-1/2 -translate-x-1/2 bottom-0 md:static md:left-auto md:translate-x-0 md:bottom-auto"
             style={{ marginBottom: 0 }}
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

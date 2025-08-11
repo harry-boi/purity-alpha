@@ -153,7 +153,7 @@ export default function TestimonialsSection() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <div className="bg-white mx-4 rounded-4xl p-6 border border-gray-100 h-full hover:shadow-xl duration-300">
+                <div className="bg-white mx-4 rounded-4xl p-6 border border-gray-100 h-full duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r bg-gray-200 rounded-full flex items-center justify-center mr-4">
                       <span className="text-white font-bold text-lg">

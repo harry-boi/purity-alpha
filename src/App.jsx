@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs";
 import FAQs from "./pages/FAQs";
+import Others from "./pages/Others";
 
 import FooterSection from "./components/FooterSection";
 import Header from "./components/Header";
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/terms" element={<PrivacyPolicy initialTab="terms" />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/aml" element={<PrivacyPolicy initialTab="aml" />} />
+        <Route path="/others" element={<Others />} />
         <Route path="/faqs" element={<FAQs />} />
       </Routes>
       <FooterSection />
