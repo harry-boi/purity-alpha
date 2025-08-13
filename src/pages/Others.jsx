@@ -12,22 +12,11 @@ export default function PrivacyPolicy() {
             import.meta.env.BASE_URL
           }background_image.webp')`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
         }}
       >
-        <header className="flex justify-between items-center max-w-full mb-4 md:py-1 relative z-10 px-4 md:px-8 lg:px-16">
-          <div className="flex space-x-2 md:px-0 md:pl-18">
-            <div>
-              <img
-                src={`${import.meta.env.BASE_URL}purity_capital_logo.png`}
-                alt="Purity Capital Logo"
-                className="w-28 md:w-32 h-auto"
-              />
-            </div>
-          </div>
-        </header>
-
         <div className="max-w-3xl mx-auto px-4 py-5">
           <div className="text-3xl font-bold mb-3">Others page</div>
           <p className="mb-6 text-center">An extra page added here</p>

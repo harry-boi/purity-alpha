@@ -11,23 +11,15 @@ export default function ContactUs() {
           backgroundImage: `url('${
             import.meta.env.BASE_URL
           }background_image.webp')`,
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center top",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 py-14 relative z-10">
-          <div className="flex justify-between items-center">
-            <img
-              src={`${import.meta.env.BASE_URL}purity_capital_logo.png`}
-              alt="Purity Capital Logo"
-              className="w-28 md:w-32 h-auto"
-            />
-          </div>
-        </div>
-
         {/* Illustration at bottom of header */}
         <img
           src={`${import.meta.env.BASE_URL}contact_illustration.webp`}
           alt="Contact Illustration"
-          className="mx-auto max-w-3xl w-full h-auto max-h-80 mt-[-60px] relative z-0 object-contain"
+          className="mx-auto max-w-3xl w-full h-auto max-h-80 mt-[-10px] relative z-0 object-contain"
         />
       </div>
 

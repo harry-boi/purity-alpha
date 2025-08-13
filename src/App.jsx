@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import DocumentTitleManager from "./components/DocumentTitleManager";
+import NavBar from "./components/NavBar";
 
 export default function App() {
   React.useEffect(() => {
@@ -23,6 +24,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <NavBar />
       <DocumentTitleManager />
       <ScrollToTopButton />
       <Routes>
