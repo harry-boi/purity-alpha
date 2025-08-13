@@ -6,7 +6,7 @@ export default function ContactUs() {
     <div className="min-h-screen bg-gray-100">
       {/* Header Section with background image */}
       <div
-        className="relative bg-cover bg-center bg-no-repeat"
+        className="relative bg-cover pt-20 md:pt-0 bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('${
             import.meta.env.BASE_URL
@@ -24,7 +24,7 @@ export default function ContactUs() {
       </div>
 
       {/* Contact Form overlapping */}
-      <div className="-mt-14 relative z-10 px-2 sm:px-4 md:px-8 mb-20">
+      <div className="-mt-6 relative z-10 px-2 sm:px-4 md:px-8 mb-20">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-12">
           <h2 className="text-lg font-semibold mb-1">
             We’d love to hear from you. Get in touch
